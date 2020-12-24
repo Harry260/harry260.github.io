@@ -14,7 +14,9 @@ html{
     user-select: none;
 }
 
-
+.hero-text span{
+    display: inline-block;
+}
 
 .wrapper::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
