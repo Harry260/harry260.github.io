@@ -28,3 +28,11 @@ slider.addEventListener("mousemove", e => {
 });
 
 window.addEventListener('load', AOS.refresh)
+
+function add_efect(element){
+  element.classList.add('animate__animated', 'animate__jello');
+
+  element.addEventListener('animationend', () => {
+  element.classList.remove('animate__animated', 'animate__jello');
+  });
+}
