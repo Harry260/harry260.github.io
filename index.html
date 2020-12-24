@@ -37,7 +37,7 @@
 
 </head>
 
-<body class="animate__animated animate__jello">
+<body onload="stop_spalsh()"  class="animate__animated animate__jello">
 
     <header>
         <div class="headr">
@@ -170,10 +170,22 @@
                 </div>
 
             </div>
+            
+        <div class="splash" id="splash">
+            <div class="splash-img-wrap"></div>
+        </div>
+
+        <script>
+            function stop_spalsh(){
+                $( '#splash' ).fadeOut('slow');
+            }
+        </script>
 
         </div>
 
     </main>
+    
+    
 
 
 
