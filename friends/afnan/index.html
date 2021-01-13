@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                transition: 0.4s;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .wrap{
+                text-align: center;
+                max-height: 100vh;
+                overflow: hidden;
+            }
+
+            .content-wrap{
+                margin-top: 25vh;
+                display: inline-block;
+                position: absolute;
+                left: calc(50% - 150px);
+            }
+
+            .image-hero-wrap{
+                padding: 3px;
+                margin: 10px;
+                display: inline-block;
+                border-radius: 100px;
+            }
+
+            .image-hero-wrap:hover{
+                background-image: linear-gradient(-20deg, #f99354 0%, #d64482 100%);
+            }
+
+            .image-div{
+                background-image: url(assets/Croped.jpeg);
+                height: 120px;
+                width: 120px;
+                background-size: 100%;
+                border: 0px solid white;
+                border-radius: 150px;
+            }
+
+            .text-content{
+                width: 300px;
+                font-family: HelveticaR;
+            }
+
+            .hero-text-h{
+                font-weight: 600;
+            }
+
+            .hero-text-p{
+                color: gray;
+                margin-bottom: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="wrap">
+
+            <div class="content-wrap">
+                <div class="image-hero-wrap">
+                    <div class="image-div">
+                        
+                    </div>
+                </div>
+                <div class="text-wrap">
+                    <div class="text-content">
+                        <h1 class="hero-text-h">I'm Afnan</h1>
+                        <p class="hero-text-p">I am a boy, who ❤️ loves football and likes to be a goalkeeper!!</p>
+                    </div>
+                    <div>
+                        <script src="https://apis.google.com/js/platform.js"></script>
+                        <div class="g-ytsubscribe" data-channelid="UCrZrTR-STu2An-v0y-Hkp2w" data-layout="default" data-count="hidden"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
