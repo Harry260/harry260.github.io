@@ -54,8 +54,8 @@
                     var stringifiedMessage = ev.newValue;
                     var message = JSON.parse(stringifiedMessage);
                     if (!message) return; 
-                    window.top.postMessage(stringifiedMessage);
-                    console.log(stringifiedMessage, '*')
+                    window.top.postMessage(stringifiedMessage, '*');
+                    console.log(stringifiedMessage)
 
 
                 });
