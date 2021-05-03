@@ -54,8 +54,9 @@
                     var stringifiedMessage = ev.newValue;
                     var message = JSON.parse(stringifiedMessage);
                     if (!message) return; 
-                    console.log("Handler on duty!")
                     window.top.postMessage(stringifiedMessage);
+                    console.log(stringifiedMessage)
+
 
                 });
 
