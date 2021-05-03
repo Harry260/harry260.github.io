@@ -1,1 +1,53 @@
-function setCmd(e){var t={type:"cmd",data:e};localStorage.setItem("cmd_channel",JSON.stringify(t))}function setVideo(e){var t={type:"video",data:e};localStorage.setItem("video_channel",JSON.stringify(t))}window.onmessage=function(e){if(e.data){var t=e.data;"cmd"===t.split("|")?setVideo(t):setCmd(t)}},window.addEventListener("storage",e=>{if("cmd_channel"==e.key||"video_channel"==e.key){var t=e.newValue;JSON.parse(t)&&window.top.postMessage(t)}});
+//Listen to parent page
+window.onmessage = function(e){
+    if(e.data){
+        var in_data = e.data;
+        var type = in_data.split("|");
+        if(type === "cmd"){
+            setVideo(in_data)
+        }
+        else {
+            setCmd(in_data)
+        }
+        
+    }
+};
+
+
+//Set command stream to other tab
+function setCmd(message){
+    var obj = {
+        "type" : "cmd",
+        "data": message
+    }
+    localStorage.setItem(
+        'cmd_channel', 
+        JSON.stringify(obj)
+    );
+}
+
+//Set video stream to other tab
+function setVideo(message){
+    var obj = {
+        "type" : "video",
+        "data": message
+    }
+    localStorage.setItem(
+        'video_channel', 
+        JSON.stringify(obj)
+    );
+}
+
+
+
+//listen to data change
+window.addEventListener('storage', (ev) => {
+    if (ev.key != 'cmd_channel' && ev.key != 'video_channel') return;
+
+    var stringifiedMessage = ev.newValue;
+    var message = JSON.parse(stringifiedMessage);
+    if (!message) return; 
+    console.log("Handler on duty!")
+    window.top.postMessage(stringifiedMessage);
+
+});
