@@ -10,8 +10,9 @@
                     if(e.data){
                         var in_data = e.data;
                         var type = in_data.split("|")[0];
+                        console.log("Stream type : " + type);
                         var out_msg = in_data.split("|")[1]
-                        if(type === "cmd"){
+                        if(type !== "cmd"){
                             setVideo(out_msg)
                         }
                         else {
