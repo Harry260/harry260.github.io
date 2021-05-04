@@ -19,13 +19,27 @@
 
                     }
                 };
+            
+                function makeid(length) {
+                    var result           = [];
+                    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    var charactersLength = characters.length;
+                    for ( var i = 0; i < length; i++ ) {
+                      result.push(characters.charAt(Math.floor(Math.random() * 
+                 charactersLength)));
+                   }
+                   return result.join('');
+                }
+
 
 
                 //Set command stream to other tab
                 function setCmd(message){
+                    var id = makeid(5);
                     var obj = {
                         "type" : "cmd",
-                        "data": message
+                        "data": message,
+                        "token": id
                     }
                     localStorage.setItem(
                         'cmd_channel', 
@@ -35,9 +49,11 @@
 
                 //Set video stream to other tab
                 function setVideo(message){
+                    var id = makeid(5);
                     var obj = {
                         "type" : "video",
-                        "data": message
+                        "data": message,
+                        "token": id
                     }
                     localStorage.setItem(
                         'video_channel', 
