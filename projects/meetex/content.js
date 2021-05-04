@@ -5,10 +5,10 @@ window.onmessage = function(e){
         var type = in_data.split("|")[0];
         var data = in_data.split("|")[1]
         if(type === "cmd"){
-            setVideo(in_data)
+            setVideo(data)
         }
         else {
-            setCmd(in_data)
+            setCmd(data)
         }
         
     }
