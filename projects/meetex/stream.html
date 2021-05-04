@@ -55,7 +55,7 @@
                     var message = JSON.parse(stringifiedMessage);
                     if (!message) return; 
                     window.top.postMessage(stringifiedMessage, '*');
-                    console.log("str " + stringifiedMessage)
+                    console.log(message)
 
 
                 });
