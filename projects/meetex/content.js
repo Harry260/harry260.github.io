@@ -2,7 +2,8 @@
 window.onmessage = function(e){
     if(e.data){
         var in_data = e.data;
-        var type = in_data.split("|");
+        var type = in_data.split("|")[0];
+        var data = in_data.split("|")[1]
         if(type === "cmd"){
             setVideo(in_data)
         }
