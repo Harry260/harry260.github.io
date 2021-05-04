@@ -12,10 +12,10 @@
                         var type = in_data.split("|")[0];
                         var out_msg = in_data.split("|")[1]
                         if(type === "cmd"){
-                            setVideo(in_data)
+                            setVideo(out_msg)
                         }
                         else {
-                            setCmd(in_data)
+                            setCmd(out_msg)
                         }
 
                     }
