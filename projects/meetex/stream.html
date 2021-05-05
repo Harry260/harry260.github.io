@@ -102,7 +102,10 @@ window.addEventListener('storage', (ev) => {
     var stringifiedMessage = ev.newValue;
     var message = JSON.parse(stringifiedMessage);
     if (!message) return; 
-    window.top.postMessage(stringifiedMessage, '*');
+    
+    try{window.top.postMessage(stringifiedMessage, '*');}
+    catch(er){console.log(er)}
+    
     console.log(message)
 
 
