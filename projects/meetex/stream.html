@@ -55,6 +55,18 @@ function setLocalData(type, message, channel){
 
 }
 
+window.onload = function(e){
+    try {
+        var mic_state = localStorage.getItem("meetify_mic_state");
+        var cam_state = localStorage.getItem("meetify_cam_state");
+
+        window.top.postMessage(cam_state, '*');
+        window.top.postMessage(mic_state, '*');
+
+    }   
+    catch{console.log("Google Meet Pro Features Failed to Initilize.")}
+}            
+
 function makeid(length) {
     var result           = [];
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
