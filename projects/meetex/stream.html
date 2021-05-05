@@ -32,6 +32,9 @@ window.onmessage = function(e){
 
 function setLocalData(type, message, channel){
     var id = makeid(5);
+    if(channel === "meetify_mic_state" || channel === "meetify_cam_state"){
+        id = "constants"
+    }
     var obj = {
         "type" : type,
         "data": message,
