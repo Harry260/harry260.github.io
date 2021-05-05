@@ -5,78 +5,109 @@
     </head>
     <body>
         <script>
-            //Listen to parent page
-                window.onmessage = function(e){
-                    if(e.data){
-                        var in_data = e.data;
-                        var type = in_data.split("|")[0];
-                        console.log("Stream type : " + type);
-                        var out_msg = in_data.split("|")[1]
-                        if(type !== "cmd"){
-                            setVideo(out_msg)
-                        }
-                        else {
-                            setCmd(out_msg)
-                        }
+window.onmessage = function(e){
+    if(e.data){
+        var in_data = e.data;
+        var type = in_data.split("|")[0];
+        console.log("Stream type : " + type);
+        var out_msg = in_data.split("|")[1]
+        if(type === "video"){
+            setVideo(out_msg)
+        }
+        else if(type === "mic_state"){
+            setLocalData("mic_state", out_msg, "meetify_mic_state");
+        }
+        else if(type === "cam_state"){
+            setLocalData("cam_state", out_msg, "meetify_cam_state");
+        }
+        else if(type === "meet_state"){
+            setLocalData("meet_state", out_msg, "meetify_meet_state");
+        }
+        else {
+            setCmd(out_msg)
+        }
 
-                    }
-                };
-            
-                function makeid(length) {
-                    var result           = [];
-                    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                    var charactersLength = characters.length;
-                    for ( var i = 0; i < length; i++ ) {
-                      result.push(characters.charAt(Math.floor(Math.random() * 
-                 charactersLength)));
-                   }
-                   return result.join('');
-                }
+    }
+};
 
+function setLocalData(type, message, channel){
+    var id = makeid(5);
+    var obj = {
+        "type" : type,
+        "data": message,
+        "token": id
+    }
+    localStorage.setItem(
+        channel, 
+        JSON.stringify(obj)
+    );
+}
 
-
-                //Set command stream to other tab
-                function setCmd(message){
-                    var id = makeid(5);
-                    var obj = {
-                        "type" : "cmd",
-                        "data": message,
-                        "token": id
-                    }
-                    localStorage.setItem(
-                        'cmd_channel', 
-                        JSON.stringify(obj)
-                    );
-                }
-
-                //Set video stream to other tab
-                function setVideo(message){
-                    var id = makeid(5);
-                    var obj = {
-                        "type" : "video",
-                        "data": message,
-                        "token": id
-                    }
-                    localStorage.setItem(
-                        'video_channel', 
-                        JSON.stringify(obj)
-                    );
-                }
+function makeid(length) {
+    var result           = [];
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result.push(characters.charAt(Math.floor(Math.random() * 
+ charactersLength)));
+   }
+   return result.join('');
+}
 
 
 
-                //listen to data change
-                window.addEventListener('storage', (ev) => {
-                    if (ev.key != 'cmd_channel' && ev.key != 'video_channel') return;
+//Set command stream to other tab
+function setCmd(message){
+    var id = makeid(5);
+    var obj = {
+        "type" : "cmd",
+        "data": message,
+        "token": id
+    }
+    localStorage.setItem(
+        'cmd_channel', 
+        JSON.stringify(obj)
+    );
+}
 
-                    var stringifiedMessage = ev.newValue;
-                    var message = JSON.parse(stringifiedMessage);
-                    if (!message) return; 
-                    window.top.postMessage(stringifiedMessage, '*');
-                    console.log(message)
+//Set video stream to other tab
+function setVideo(message){
+    var id = makeid(5);
+    var obj = {
+        "type" : "video",
+        "data": message,
+        "token": id
+    }
+    localStorage.setItem(
+        'video_channel', 
+        JSON.stringify(obj)
+    );
+}
 
 
-                });
+
+//listen to data change
+window.addEventListener('storage', (ev) => {
+
+    var channelWhitelist = [
+        'cmd_channel', 
+        'video_channel', 
+        'meetify_mic_state', 
+        'meetify_cam_state', 
+        'meetify_meet_state'
+    ]
+    
+    if (channelWhitelist.includes(ev.key) === false) return;
+
+    meetify_mic_state
+    var stringifiedMessage = ev.newValue;
+    var message = JSON.parse(stringifiedMessage);
+    if (!message) return; 
+    window.top.postMessage(stringifiedMessage, '*');
+    console.log(message)
+
+
+});
 
         </script>
     </body>
