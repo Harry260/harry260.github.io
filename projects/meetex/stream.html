@@ -31,20 +31,27 @@ window.onmessage = function(e){
 };
 
 function setLocalData(type, message, channel){
-    var id = makeid(5);
-    if(channel === "meetify_mic_state" || channel === "meetify_cam_state"){
-        id = "constants"
+    
+    try{
+        var id = makeid(5);
+        if(channel === "meetify_mic_state" || channel === "meetify_cam_state"){
+            id = "constants"
+        }
+        var obj = {
+            "type" : type,
+            "data": message,
+            "token": id
+        }
+        localStorage.setItem(
+            channel, 
+            JSON.stringify(obj)
+        );
+        console.log("Successfully streamed message.")
     }
-    var obj = {
-        "type" : type,
-        "data": message,
-        "token": id
+    catch(err){
+        console.log(err)
     }
-    localStorage.setItem(
-        channel, 
-        JSON.stringify(obj)
-    );
-    console.log("Successfully streamed message.")
+
 }
 
 function makeid(length) {
