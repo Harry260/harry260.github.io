@@ -10,7 +10,8 @@ window.onmessage = function(e){
         var in_data = e.data;
         var type = in_data.split("|")[0];
         console.log("Stream type : " + type);
-        var out_msg = in_data.split("|")[1]
+        var out_msg = in_data.split("|")[1];
+        alert(type)
         if(type === "video"){
             setVideo(out_msg)
         }
