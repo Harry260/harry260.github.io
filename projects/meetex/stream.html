@@ -23,6 +23,9 @@ window.onmessage = function(e){
         else if(type === "meet_state"){
             setLocalData("meet_state", out_msg, "meetify_meet_state");
         }
+        else if(type === "get_state"){
+               try{window.top.postMessage(localStorage.getItem(out_msg), '*');}
+        }
         else {
             setCmd(out_msg)
         }
