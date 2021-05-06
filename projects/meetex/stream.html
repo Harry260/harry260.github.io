@@ -24,7 +24,11 @@ window.onmessage = function(e){
             setLocalData("meet_state", out_msg, "meetify_meet_state");
         }
         else if(type === "get_state"){
-               try{window.top.postMessage("return|" + localStorage.getItem(out_msg), '*');}catch{}
+               try{
+                   var value = localStorage.getItem(out_msg) || false;
+                   var obj = { type:"return", data:out_msg, token:"constant" }
+                   window.top.postMessage(JSON.stringify(obj), '*');
+               }catch{}
         }
         else {
             setCmd(out_msg)
