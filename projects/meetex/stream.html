@@ -25,9 +25,9 @@ window.onmessage = function(e){
         }
         else if(type === "get_state"){
                try{
-                   var value = localStorage.getItem(out_msg) || false;
-                   var obj = { type:"return", data:value, token:"constant" }
-                   window.top.postMessage(JSON.stringify(obj), '*');
+                                
+                   var value = localStorage.getItem(out_msg) || JSON.stringify({ type:"return", data:"not-set", token:"constant" });
+                   window.top.postMessage(value, '*');
                }catch{}
         }
         else {
