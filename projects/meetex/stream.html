@@ -26,7 +26,7 @@ window.onmessage = function(e){
         else if(type === "get_state"){
                try{
                    var value = localStorage.getItem(out_msg) || false;
-                   var obj = { type:"return", data:out_msg, token:"constant" }
+                   var obj = { type:"return", data:value, token:"constant" }
                    window.top.postMessage(JSON.stringify(obj), '*');
                }catch{}
         }
