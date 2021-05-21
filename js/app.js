@@ -14,6 +14,7 @@ initAnimation();
 if ("ontouchstart" in document.documentElement)
 {
   isTouch = true;
+  cursor.remove();
 }
 else
 {
