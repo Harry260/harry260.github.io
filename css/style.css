@@ -1,0 +1,410 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline-width: 0;
+    transition: 0.4s;
+    font-family: sf-medium;
+    color: white;
+    scroll-behavior: smooth;
+    cursor: none;
+}
+
+*::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+    cursor: grab;
+}
+
+*::-webkit-scrollbar
+{
+	width: 5.0px;
+    height: 5.0px;
+    cursor: grab;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #555;
+    background-image: var(--grad-1);
+    cursor: grab;
+}
+
+:root{
+    --background-color: black;
+    --favicon: url("../assets/images/favicon.png");
+    --grad-image: url("../assets/images/grad_mesh_1.jpg");
+    --grad-1: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+}
+
+body{
+    background-color: var(--background-color);
+    height: 100vh;
+    width: 100%;
+}
+
+.top-wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.us{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.web-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.fixed-100{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.hero-wrapper{
+    height: 100vh;
+    perspective: 100px;
+}
+
+.hero-h1{
+
+    width: 900px;
+    font-family: sf-heavy;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: -0.055em;
+    text-align: left;
+
+}
+
+.header-wrap{
+    padding: 25px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+}
+
+.header-b{
+    background: rgba(6, 6, 6, 0.8);
+    backdrop-filter: blur(18px);
+    padding: 10px 25px;
+}
+
+.icon-web{
+    background-image: var(--favicon);
+}
+
+.favicon-top{
+    width: 40px;
+    height: 40px;
+}
+
+.button-action{
+    background-image: var(--grad-image);
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.button-text{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.button-action:hover{
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+.header-nav{
+    z-index: -1;
+}
+
+.header-nav nav a{
+    margin-left: 10px;
+}
+
+.header-nav nav:hover .top-link{
+    color: gray;
+}
+
+.top-link:hover{
+    color: white !important;
+}
+
+.header-nav-normal{
+    position: absolute;
+    right: 25px;
+}
+
+.uline{
+    background-image: url('../assets/images/ul.svg');
+    width: 100px !important;
+    height: 20px !important;
+    bottom: 0;
+}
+
+.project-item{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: #101010;
+    border: 1px solid #101010;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 -1px 40px rgba(0,0,0, .12);
+    overflow: hidden;
+    max-width: 1150px;
+}
+
+.project-item:hover{
+    transform: scale(1.1) !important;
+}
+
+.project-image{
+    width: 700px;
+}
+
+
+.project-title{
+    color: white;
+    font-size: 40px;
+    font-family: sf-bold;
+    line-height: 42px;
+    width: 100%;
+}
+
+.project-sub{
+    font-size: 20px;
+    line-height: 22px;
+    color: hsla(0, 0%, 100%, 0.5);
+    margin-bottom: 10px;
+}
+
+.project-text{
+    padding: 40px;
+    position: relative;
+}
+
+.launch-button{
+    display: inline-block;
+    position: absolute;
+    bottom: 25px;
+}
+
+.other-projects{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 90px;
+    max-width: 1150px;
+}
+
+.op-header h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #101010;
+}
+
+.item-list:hover{
+    padding: 50px 0;
+}
+
+.item-list h1{
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    font-family: sf-heavy;
+    line-height: 100px;
+}
+
+.open-button-op{
+    display: none;
+}
+
+.open-button-op h1{
+    font-size: 25px;
+    line-height: 26px;
+}
+
+.item-list:hover h1{
+    -webkit-text-fill-color: white;
+    columns: white;
+}
+
+.item-list:hover p{
+    display: block;
+    -webkit-animation: CSSfadeIn 1s;
+    animation: CSSfadeIn 1s;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.item-list:hover .open-button-op{
+    display: inline-block;
+    -webkit-animation: CSSfadeIn 1s;
+    animation: CSSfadeIn 1s;
+}
+
+.item-list p{
+    font-size: 20px;
+    display: none;
+    color: gray;
+}
+
+.project-header-text{
+    font-family: sf-bold;
+    font-size: 60px;
+    margin: 0 auto;
+    width: fit-content;
+    width: 800px;
+    line-height: 60px;
+    margin-bottom: 12px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.back-clip{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fake-warn{
+    font-size: 20px;
+    margin: 0 auto;
+    width: 600px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: gray;
+}
+
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.637);
+    pointer-events: none;
+    z-index: 9999;
+    transition: 0.1s;
+}
+
+.about-div{
+    width: 100%;
+    z-index: 99;
+    margin-top: 160px;
+    text-align: left;
+    background-color: #101010;
+    padding-top: 100px;
+    position: relative;
+}
+
+.about-inner{
+    width: 800px;
+}
+
+.me-image{
+    width: 100px;
+    border-radius: 300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.text-about{
+    
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
+    font-size: 50px;
+    font-family: sf-medium;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+
+.text-about:hover{
+    background-size: 100% 100%;
+}
+
+.pop-gif{
+    width: 100%;
+}
+
+.pop-gif:hover{
+    transform: scale(0.8) rotate(5deg) scaleX(1.1) !important;
+}
+
+.copyright-notice{
+    font-size: 20px;
+    color: gray;
+    margin: 50px 0;
+}
+
+.copy-a:hover{
+    background-image: var(--grad-image);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 1s ease infinite;
+}
+
+.button-menupop{
+    display: none;
+}
+
+.button-menupop img{
+    width: 30px;
+    height: 30px;
+}
+
+.link-body{
+    background-color: black;
+    overflow: hidden;
+}
+
+.inner-fix-link{
+    background-image: url('../assets/images/invert.png');
+    width: 105px;
+    height: 105px;
+}
+
+.inner-logo-link{
+    width: 100px;
+    height: 100px;
+    background-image: url('../assets/images/grad_mesh_1.jpg');
+    background-position: 0%;
+    animation: logo-load infinite 5s;
+}
+
+.div-error{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.76);
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+}
