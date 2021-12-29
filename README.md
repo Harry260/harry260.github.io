@@ -15,9 +15,9 @@ There is three files you can customize,
 
 | File          | Use                                      |
 |---------------|-----------------------------------------------|
-| social.json   | Replace the values with your social profiles. |
-| projects.json | Replace the values with your projects data    |
-| apps.json     | Setup apps and desktop                        |
+| [social.json](#socialjson)  | Replace the values with your social profiles. |
+| [projects.json](#projectsjson) | Replace the values with your projects data    |
+| [apps.json](#appsjson)    | Setup apps and desktop                        |
 
 ## `social.json`
 This file is used to configure Social Profiles. See the below object to understand the structure
