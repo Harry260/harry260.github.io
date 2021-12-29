@@ -22,7 +22,7 @@ There is three files you can customize,
 ## `social.json`
 This file is used to configure Social Profiles. See the below object to understand the structure
 
-```
+```json
 {
 "links":{
     "[social_platform]": "[link]"
@@ -43,7 +43,7 @@ This file is used to configure Social Profiles. See the below object to understa
 This file is used to configure Projects. See the below object to understand the structure
 
 ##### EXAMPLE
-```
+```json
 "project_id": {
     "id": " project_id",
     "title": "Project Title",
@@ -68,7 +68,7 @@ This file is used to configure Projects. See the below object to understand the 
 ## `apps.json`
 
 This file is used to configure Apps like things in the protfolio, Example "README.md" inside the project or "VS code" inside it . See the below object to understand the structure
-```
+```json
 "app_id":{
     "icon": "appicon.svg",
     "title": "App Title",
