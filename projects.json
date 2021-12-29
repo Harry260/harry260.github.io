@@ -1,0 +1,92 @@
+{
+    "wikifox": {
+        "id": " wikifox",
+        "title": "Wikifox",
+        "icon": "icons/wikifox.svg",
+        "description": "Wikifox is a clean, powerful and simplified Wikipedia. It is a Web app that allows you to search Wikipedia articles and read them on your device comfortably.",
+        "link": "https://wikifox.ml/",
+        "github": "http://github.com/harry260/wikifox",
+        "openTarget": "_self"
+    },
+    "bobthebot": {
+        "id": "bobthebot",
+        "title": "Bob",
+        "icon": "icons/bob.png",
+        "description": "Bob is a bot that can use your device's camera to recognize your facial expression and speaks accordingly! This asks you about saying about jokes, cat's/dog's picture, News and many more according to your expression!",
+        "link": "https://bobthebot.netlify.app/",
+        "github": "https://github.com/harry260/bobthebot",
+        "openTarget": "_blank"
+    },
+    "drag": {
+        "id": "drag",
+        "title": "Dragshorts",
+        "icon": "icons/drag.png",
+        "description": "Dragshorts Is an Instagram BOT, which posts latest news updates frequently. You don't need to install any apps or services, just follow the bot to get news at your Instagram doorstep!",
+        "link": "https://instagram.com/dragshorts",
+        "github": "https://github.com/Harry260/instagram-news-bot",
+        "openTarget": "_blank"
+    },
+    "rockpaper": {
+        "id": "rockpaper",
+        "title": "RPC",
+        "icon": "icons/rockpaper.png",
+        "description": "Play rockpaper with your friends online for free!!",
+        "link": "https://rockpaper.ml/",
+        "github": "https://github.com/Harry260/rockpaper",
+        "openTarget": "_self"
+    },
+    "wikifox.js": {
+        "id": "wikifoxjs",
+        "title": "WikifoxJS",
+        "icon": "icons/wikifox.js.png",
+        "description": "WikifoxJS is a light-weight, powerful and restful Javascript library which connects to WikiPedia api. This library can be used to get Content from wikipedia.",
+        "link": "https://harry260.github.io/wikifox.js",
+        "github": "https://github.com/Harry260/wikifox.js",
+        "openTarget": "_self"
+    },
+    "marrkit": {
+        "id": "marrkit",
+        "title": "MarrKit",
+        "icon": "icons/marrkit.png",
+        "description": "By installing marrkit to your html file, This allows you to render markdown with just a html tag. You can also fetch file form remote file with 'src' attribute. This also fixes all the relative urls from remote file!",
+        "link": "https://github.com/Harry260/marrkit",
+        "github": "https://github.com/Harry260/marrkit",
+        "openTarget": "_blank"
+    },
+    "doodleshorts": {
+        "id": "doodleshorts",
+        "title": "Doodle Shorts",
+        "icon": "icons/doodleshorts.png",
+        "description": "A light-weight InShorts clone with multiple category, plus clean user interface, which runs on the web!",
+        "link": "https://doodleshorts.netlify.app/",
+        "github": "https://github.com/Harry260/doodle-shorts",
+        "openTarget": "_self"
+    },
+    "scriptfun": {
+        "id": "scriptfun",
+        "title": "ScriptFun",
+        "icon": "icons/scriptfun.png",
+        "description": "A super cool Graphical Visual Basics based Message box script maker!",
+        "link": "https://harry260.github.io/script-fun/",
+        "github": "https://harry260.github.io/script-fun/",
+        "openTarget": "_self"
+    },
+    "doodlecode": {
+        "id": "doodlecode",
+        "title": "Doodle Code",
+        "icon": "icons/doodlecode.png",
+        "description": "Create awesome Qr code in just one click! You can Both Encode and Decode Qr codes with the maximum accuracy. ",
+        "link": "https://github.com/Harry260/Doodle-Code",
+        "github": "https://github.com/Harry260/Doodle-Code",
+        "openTarget": "_blank"
+    },
+    "dragme": {
+        "id": "dragme",
+        "title": "Drag Me",
+        "icon": "icons/dragme.png",
+        "description": "Firebase based Drag and Drop PvP game, which was an experiment to make a game that was an absolute failure!!",
+        "link": "https://dragme.ml/",
+        "github": "https://github.com/Harry260/drag-me",
+        "openTarget": "_blank"
+    }
+}

@@ -1,0 +1,67 @@
+@media (max-width:1200px) {
+    .window-layer{
+        width: 92%;
+    }
+}
+
+@media (max-width: 900px) {
+    *::-webkit-scrollbar {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 870px) {
+    .menu-left{
+        position: fixed;
+        display: block;
+        top: 52px;
+        background-color: white;
+        border: var(--border);
+        width:250px;
+        border-bottom: none;
+        display: none;
+    }
+
+    .menu-btn-mobile{
+        display: flex
+    }
+
+    .os-logo img{
+        display: none;
+    }
+
+    .user-text{
+        display: block;
+        text-align: center;
+    }
+
+    .menu-bar-item{
+        text-align: center;
+        border-bottom: var(--border);
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .markdown-body{
+        padding: 30px;
+    }
+
+    *::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .app-icon:hover .project-info{
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .menu-left{
+        width: 92%;
+        left: 4%;
+    }
+}

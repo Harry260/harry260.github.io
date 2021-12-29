@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Plugins-->
+    <link rel="stylesheet" href="assets/plugins/animate_v4/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/plugins/aos/v4.css" type="text/css" />
+
+    <!--Other Links-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.ui.css" type="text/css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <title>Harry - Projects</title>
+    <meta name="title" content="Harry - Projects">
+    <meta name="description" content="My OS-like portfolio!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://harrytom.netlify.app/">
+    <meta property="og:title" content="Harry - Projects">
+    <meta property="og:description" content="My OS-like portfolio!">
+    <meta property="og:image" content="assets/images/Banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="assets/images/Banner.png">
+    <meta property="twitter:url" content="http://harrytom.netlify.app/">
+    <meta property="twitter:title" content="Harry - Projects">
+    <meta property="twitter:description" content="My OS-like portfolio!">
+    <meta property="twitter:image" content="assets/images/Banner.png">
+
+</head>
+
+<body>
+    <div class="app-wrap center">
+        <div class="main-window-wrap dotted animate_animated animate__zoomIn">
+            <div class="app-menu-bar v-center us">
+
+                <div class="menu-item-wrap menu-btn-mobile center n">
+                    <img src="assets/icons/menu.svg" class="menu-i">
+                    <img src="assets/icons/close.svg" class="close-i n">
+                </div>
+
+                <div class="menu-left center">
+
+                    <div class="menu-item-wrap">
+                        <div class="menu-bar-item center os-logo action-x">
+                            <h1 class="menu-item-text v-center">
+                                <img src="assets/images/favicon.png">
+                                <spna class="user-text n">
+                                    Harry
+                                    </span>
+                            </h1>
+                        </div>
+                        <div class="menu-item-pop action-hide">
+                            <div class="menu-bar-item app-trigger one-click" data-app="readme">
+                                <h1 class="menu-item-text">About</h1>
+                            </div>
+                            <div class="menu-bar-item app-trigger one-click" data-app="finder">
+                                <h1 class="menu-item-text">Finder</h1>
+                            </div>
+                            <div class="pop-divider"> </div>
+                            <div class="menu-bar-item action" data-action="logout">
+                                <h1 class="menu-item-text">Logout</h1>
+                            </div>
+                            <div class="menu-bar-item action" data-action="restart">
+                                <h1 class="menu-item-text">Restart</h1>
+                            </div>
+                            <div class="menu-bar-item action" data-action="shutdown">
+                                <h1 class="menu-item-text">Shutdown</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-wrap">
+                        <div class="menu-bar-item action-x">
+                            <h1 class="menu-item-text">Works</h1>
+                        </div>
+                        <div class="menu-item-pop action-hide">
+                            <div class="project-list-root"></div>
+                            <div class="pop-divider"> </div>
+                            <div class="menu-bar-item app-trigger one-click" data-app="projects">
+                                <h1 class="menu-item-text">More..</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item-wrap">
+                        <div class="menu-bar-item action-x">
+                            <h1 class="menu-item-text">Social</h1>
+                        </div>
+                        <div class="menu-item-pop action-hide">
+                            <div class="social-list-root"></div>
+                            <div class="pop-divider"> </div>
+                            <div class="menu-bar-item app-trigger one-click" data-app="social">
+                                <h1 class="menu-item-text">More..</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="clean-i action" data-action="social@buymeacoffee">
+                        <div class="menu-bar-item">
+                            <h1 class="menu-item-text">Support</h1>
+                        </div>
+                    </a>
+
+                    <a class="clean-i action" data-action="social@github">
+                        <div class="menu-bar-item">
+                            <h1 class="menu-item-text">GitHub</h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="color-themes center">
+                    <div class="color-ball"></div>
+                    <div class="color-ball"></div>
+                    <div class="color-ball"></div>
+                </div>
+            </div>
+            <div class="workspace-desktop">
+                <div class="icon-shelf us"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="lock-screen overlay center us">
+        <div class="lock-info">
+            <div class="user-icon">
+                <img src="assets/images/favicon.png">
+            </div>
+            <div class="center">
+                <h1 class="lock-name">Harry</h1>
+            </div>
+            <div class="center button-signin">
+                <button class="action" data-action="login">SignIn</button>
+            </div>
+
+            <audio autoplay>
+                <source src="assets/audio/startup.mp3" type="audio/ogg">
+            </audio>
+        </div>
+    </div>
+</body>
+
+<!--Plugins-->
+<script src="assets/plugins/jq/jquery.js"></script>
+<script src="assets/plugins/aos/script.js"></script>
+<script src="assets/plugins/jq/jquery.ui.js"></script>
+<script src="assets/plugins/marrkit/marrkit.js"></script>
+
+<!--Me scripts :)-->
+<script src="js/app.js"></script>
+<script src="js/desktop.js"></script>
+<script src="js/app.ui.js"></script>
+<script src="js/action.js"></script>
+
+
+</html>

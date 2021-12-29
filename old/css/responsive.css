@@ -1,0 +1,182 @@
+@media (max-width:1140px) {
+    .project-image{
+        width: 450px;
+    }
+
+    .project-text{
+        padding: 20px;
+    }
+
+    .project-title{
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .launch-button{
+        padding: 5px 10px !important;
+    }
+
+    .launch-button .button-text{
+        font-size: 15px;
+    }
+
+    .hero-h1{
+        width: 700px;
+        font-size: 60px;
+        line-height: 62px;
+    }
+
+    .item-list{
+        padding: 0;
+    }
+
+    .item-list h1{
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+
+@media (max-width:850px) {
+    .project-item{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .project-image{
+        width: 100%;
+    }
+
+    .launch-button{
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+    }
+
+    .project-title{
+        font-family: sf-medium;
+    }
+
+    .project-header-text, .fake-warn{
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .project-header-text{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .fake-warn{
+        font-size: 15px;
+    }
+
+    .about-div{
+        padding-top: 30px;
+    }
+
+    .about-inner{
+        width: 80%;
+    }
+
+    .text-about{
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width:950px){
+    .op-header h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:770px) {
+    .hero-text{
+        width: 80%;
+        padding: 30px;
+    }
+
+    .hero-h1{
+        font-size: 50px;
+        line-height: 62px;
+        width: 100%;
+        line-height: 49px;
+    }
+}
+
+@media (max-width:640px) {
+    .hero-text{
+        width: 90%;
+        padding: 30px;
+    }
+
+    .hero-h1{
+        font-size: 40px;
+        line-height: 62px;
+        width: 100%;
+        line-height: 42px;
+    }
+
+    .mob-inv{
+        display: none;
+    }
+
+    .header-nav{
+        display: none;
+        position: fixed;
+        background: rgba(6, 6, 6, 0.89);
+        backdrop-filter: blur(18px);
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-nav nav{
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .header-nav nav a{
+        font-size: 50px;
+        font-family: sf-bold;
+        line-height: 55px;
+    }
+
+    .button-menupop{
+        display: block;
+    }
+
+    .other-projects{
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    .item-list h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width:500px) {
+    .project-title{
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .project-sub{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:400px) {
+    .project-header-text{
+        font-size: 30px;
+        line-height: 30px;
+    }
+}

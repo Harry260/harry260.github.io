@@ -1,0 +1,74 @@
+@import url("fonts.css");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline-width: 0;
+    scroll-behavior: smooth;
+    font-family: chicago;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-center{
+    display: flex;
+    justify-content: center;
+}
+
+.v-center{
+    display: flex;
+    align-items: center;
+}
+
+.clean-i{
+    text-decoration: none;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 12;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 25px;
+    height: 25px;
+}
+
+*::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color:  var(--accent);
+    margin: 0 5px;
+
+}
+
+.n{
+    display: none;
+}
+
+.us {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+} 

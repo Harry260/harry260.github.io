@@ -1,0 +1,58 @@
+{
+    "apps": {
+
+        "readme":{
+            "type": "mark-down",
+            "title": "README.md",
+            "action": "readme",
+            "id": "readme",
+            "src": "https://raw.githubusercontent.com/harry260/harry260/main/README.md",
+            "desktop": true
+        },
+        "projects":{
+            "icon": "projects.png",
+            "title": "Projects",
+            "action" : "projects",
+            "type": "iframe",
+            "id": "projects",
+            "src": "apps/projects.html",
+            "desktop": true
+        },
+        "finder":{
+            "icon": "finder.png",
+            "title": "Finder",
+            "action" : "finder",
+            "type": "iframe",
+            "id": "finder",
+            "src": "apps/finder.html",
+            "desktop": true
+        },
+        "wikifox":{
+            "icon": "wikifox.svg",
+            "title": "Wikifox",
+            "action" : "wikifox",
+            "type": "iframe",
+            "id": "wikifox",
+            "src": "https://wikifox.netlify.app/",
+            "desktop": true
+        },
+        "social":{
+            "icon": "social.png",
+            "title": "Social",
+            "action" : "social",
+            "type": "iframe",
+            "id": "social",
+            "src": "apps/social.html",
+            "desktop": false
+        },
+        "vscode":{
+            "icon": "vscode.png",
+            "title": "vscode",
+            "action" : "vscode",
+            "type": "iframe",
+            "id": "vscode",
+            "src": "apps/vscode.html",
+            "desktop": true
+        }
+    }
+}

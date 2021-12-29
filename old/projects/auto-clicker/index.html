@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Link Click Bot</title>
+    </head>
+    <body>
+        <h1>This is a link bot made for demonstration. To use this bot, enter your link bellow including the protocol (http, https etc.)</h1>
+        <p>To terminate the process, close this parent window! And this is made possible with <a href="https://github.com/Harry260/across-tabs">across-tabs</a></p>
+        <input type="text" id="link" value="http://"><br><br>
+        <button onclick="start()">Start</button><br>
+
+        <script>
+            function start(){
+                var linkt = document.getElementById("link").value
+                if(linkt){
+                    window.location.replace("index.html?" + linkt)
+                }
+            }
+        </script><br>
+        <a href="http://harrytom.ml">Made by Harry Yay!</a>
+        <br>
+        <a href="https://github.com/harry260">Github</a>
+    </body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/across-tabs/1.0.0/across-tabs.min.js"></script>
+    <script type="text/javascript" >
+    
+        //Author : Harry Tom
+        //Please visit my github @ https://hgithub.com/harry260, 
+        //Portfolio @ https://harrytom.ml
+        //Whatsapp https://harrytom.ml/wa
+
+        var parent = new AcrossTabs.Parent({});
+
+        var config = {
+            handshakeExpiryLimit: 100, 
+        };
+        var child =  new AcrossTabs.Child(config);
+        function openTab(){
+            parent.openNewTab({url: link, windowName: 'AcrossTab'});
+        }
+        
+    </script>
+
+    <script>
+        
+        var link = window.location.search.substr(1);
+        
+        if(link){
+            setInterval(() => {
+                parent.closeAllTabs();  
+                openTab();
+            }, 100);
+        }
+    </script>
+</html>
