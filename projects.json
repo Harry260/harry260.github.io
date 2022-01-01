@@ -1,4 +1,13 @@
 {
+    "quizify": {
+        "id": "quizify",
+        "title": "Bob",
+        "icon": "icons/quizify.gif",
+        "description": "A simple and awesome Quiz Game which supports Multiplayer and Single Player. Also Support variety of customization. Boost your knowledge, while having fun!",
+        "link": "https://quizify.ml/",
+        "github": "https://github.com/harry260/",
+        "openTarget": "_blank"
+    },
     "wikifox": {
         "id": " wikifox",
         "title": "Wikifox",

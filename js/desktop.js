@@ -6,8 +6,14 @@ App.getJson("apps.json", (data) => {
     window.actions.start("readme");
     actions.login();
 
-})
+    
+    if(window.location.hash.substr(1)){
+        try {
+            window.actions.start(window.location.hash.substr(1))
+        } catch{}
+    }
 
+})
 
 const Desktop = {
     init: function() {
@@ -82,4 +88,3 @@ const Desktop = {
         }
     }
 }
-
